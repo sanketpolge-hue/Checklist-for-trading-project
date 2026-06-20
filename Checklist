@@ -1,0 +1,27 @@
+PROJECT_SPECIFICATIONS.md
+Performance Design
+Because we're scanning all NSE stocks:
+Initial Load
+Download full historical data once.
+Daily Updates
+Fetch only new candles.
+Recalculate indicators incrementally.
+Update watchlists automatically.
+This should keep post-market refresh practical even with 2,000+ stocks.
+What Happens Next
+We are now ready to build Module 1: Data Engine, which will include:
+Files to be created
+scripts/update_data.py
+scripts/symbols.py
+database/schema.sql
+database/db.py
+scripts/calculate_indicators.py
+Deliverables
+Yahoo Finance downloader
+NSE symbol universe loader
+SQLite database creation
+Historical OHLC storage
+Daily incremental updates
+Daily/Weekly/Monthly RSI calculations
+20 DMA calculations
+Bollinger Band calculations
